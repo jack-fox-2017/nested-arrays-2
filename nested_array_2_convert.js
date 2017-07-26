@@ -13,7 +13,19 @@ let roster = [
 
 function convert_roster_format (nestedArray) {
   // your convert code here
-}
+  let arr = [];
+
+  for  (let i = 1; i < nestedArray.length; i++){
+    let tampung = {};
+      for (let j = 0; j< nestedArray[i].length; j++ ){
+        tampung[nestedArray[0][j]] = nestedArray[i][j]
+        }
+          arr.push(tampung);
+      }
+            return arr;
+  }
+
+
 
 let object_roster = convert_roster_format(roster)
 console.log(object_roster[2])
