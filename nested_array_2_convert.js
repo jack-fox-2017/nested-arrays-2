@@ -8,16 +8,21 @@ let roster = [
   [7, 'Sally Talls', 'Power Forward ', [18, 29, 26, 31, 19] ],
   [22, 'MK DiBoux ', 'Small Forward ', [11, 0, 23, 17, 0] ]
 ]
-
 // [[roster[0][0], roster[1][0]], [roster[0][1], roster[1][1]],...
-
 function convert_roster_format (nestedArray) {
-  // your convert code here
+  let arrTamp = []
+  for(let i = 1; i < nestedArray.length; i++){
+    let objBaru = {}
+    for(let w = 0; w < nestedArray[i].length; w++){
+      objBaru[nestedArray[0][w]] = nestedArray[1][w]
+    }
+    arrTamp.push(objBaru)
+  }
+  return arrTamp
 }
 
 let object_roster = convert_roster_format(roster)
 console.log(object_roster[2])
-
 // => { "Number": 31, "Name": "Harvey Kay", "Position": "Shooting Guard", "Points per Game": [0, 30, 16, 0, 25] }
 
 console.log(object_roster[0]['Name'] == 'Joe Schmo') // outputs true
