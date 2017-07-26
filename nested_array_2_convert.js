@@ -21,7 +21,7 @@ function convert_roster_format (nestedArray) {
       }
       temp.push(obj)
     }
-    return temp
+  return temp
 }
 
 //console.log(convert_roster_format(roster));
