@@ -18,10 +18,9 @@ function convert_roster_format(nestedArray) {
   var array = [];
   for (var i = 1; i < nestedArray.length; i++) {
     var roster = {};
-    roster[nestedArray[0][0]] = nestedArray[i][0]
-    roster[nestedArray[0][1]] = nestedArray[i][1]
-    roster[nestedArray[0][2]] = nestedArray[i][2]
-    roster[nestedArray[0][3]] = nestedArray[i][3]
+    for (var j = 0; j < nestedArray[i].length; j++) {
+      roster[nestedArray[0][j]] = nestedArray[i][j]
+    }
     array.push(roster)
   }
   // Object.assign({}, nestedArray);
@@ -29,7 +28,7 @@ function convert_roster_format(nestedArray) {
 }
 
 let object_roster = convert_roster_format(roster)
-console.log(object_roster[2])
+console.log(object_roster)
 
 // => {
 //     "Number": 31,
