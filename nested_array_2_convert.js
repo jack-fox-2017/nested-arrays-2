@@ -20,7 +20,7 @@ let arr =[];
 var obj ={}
 var j =1;
 
-while(j < 6){
+while(j < nestedArray.length){
 
   for(let i =0; i <roster[i].length; i ++)
   {
